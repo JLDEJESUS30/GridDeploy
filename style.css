@@ -1,0 +1,82 @@
+.H1 {
+    font-weight: 300;
+    color: white;  /* Ensure the text color is white */
+}
+.HD1{
+    background-color:linear-gradient(to bottom, #ff7e5f, #feb47b); ;
+}
+
+.p{
+    color: black;
+}
+.cl{
+    color: black;
+}
+.btn {
+    width: auto; /* Adjusted from fixed width to auto to fit text */
+    padding: 0.5em 1em; /* Adjust padding for better fit */
+    height: auto; /* Adjust height to be auto to fit content */
+    margin: 0.5em;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 0.625em;
+    font-size: 16px; /* Reduced font size to fit better */
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    display: inline-block; /* Ensures proper fit */
+    white-space: nowrap; /* Prevents text from wrapping */
+    outline: none; /* Removes the default focus outline */
+}
+
+.btn:hover {
+    color: black;
+}
+
+.btn:after {
+    content: "";
+    background: white;
+    position: absolute;
+    z-index: -1;
+    left: -20%;
+    right: -20%;
+    top: 0;
+    bottom: 0;
+    transform: skewX(-45deg) scale(0, 1);
+    transition: all 0.5s;
+}
+
+.btn:hover:after {
+    transform: skewX(-45deg) scale(1, 1);
+    transition: all 0.5s;
+}
+
+.btn:focus {
+    outline: none; /* Ensures the focus outline is removed */
+}
+
+.btn:focus-visible {
+    outline: none; /* For better browser compatibility */
+}
+
+.spacer {
+    margin-right: -0.5px; /* Adjust the value to control the spacing */
+}
+
+.spacer:last-child {
+    margin-right: 0px; /* Ensures no extra space on the last element */
+}
+/* Custom CSS */
+.valign-wrapper {
+    display: flex;
+    align-items: stretch; /* Align items to stretch to the same height */
+}
+
+.valign {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
